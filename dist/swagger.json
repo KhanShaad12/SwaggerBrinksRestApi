@@ -1,0 +1,39 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Brink's Developer Sandbox REST API",
+    "description": "Rest Api For External Brink's Customer",
+    "contact": {
+      "name": "Salesforce B2C Commerce Infocenter"
+    }
+  },
+  "host": "brinks--devp2.sandbox.my.salesforce.com",
+  "basePath": "/services/apexrest/",
+  "securityDefinitions": {
+    "ClientCredentials": {
+      "type": "oauth2",
+      "description": "Authenticate using Commerce Cloud Account Manager with your client credentials.",
+      "tokenUrl": "https://brinks--devp2.sandbox.my.salesforce.com/services/oauth2/token",
+      "flow": "password"
+    }
+  },
+  "paths": {
+    "/Case": {
+      "get": {
+        "tags": [
+          "Orders"
+        ],
+        "description": "Returns 'Order list' to the caller",
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "default": {
+            "description": "Error"
+          }
+        }
+      }
+    }
+  }
+}
